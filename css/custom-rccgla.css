@@ -56,6 +56,19 @@
     font-size: 60px;
 }
 
+@media (max-width: 991px) {
+
+    .prayerhv {
+      display:none !important
+    }
+   
+
+}
+
+
+
+/*.container {margin-right:20px; margin-left: 20px;}*/
+
 @media screen and (max-height: 450px) {
     .overlaypages a {
         font-size: 20px
@@ -86,11 +99,14 @@
 
 .announcementdescription p, .announcementdescription ul{color:black}
 
+.mainmenu .active {
+    background-color: #ae0802
+}
 
 .card {
     position: relative;
     display: -ms-flexbox;
-    display: flex;
+    /*display: flex;*/
     -ms-flex-direction: column;
     flex-direction: column;
     min-width: 0;
