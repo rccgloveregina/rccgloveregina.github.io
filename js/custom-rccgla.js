@@ -34,6 +34,11 @@ function showInfo(data, tabletop) {
         var interacdesc = datagen[i]['interac-description'];
         var contactdesc = datagen[i]['contact-description'];
         var givingtagline = datagen[i]['giving-tagline'];
+        var logotitle2 = datagen[i]['logo-title'];
+        var livebroadcast = datagen[i]['live-broadcast'];
+
+
+        //alert(interacdesc + "hh" + givingtagline );
 
         var mandatequote = datagen[i]['mandate-quote'];
         var mandateauthor = datagen[i]['mandate-author'];
@@ -50,7 +55,7 @@ function showInfo(data, tabletop) {
         var announcementurl = datagen[i]['announcement-url'];
         var announcementdate = datagen[i]['announcement-date'];
         
-
+        
      
 
         $('.announcementtitle').html(announcementtitle);
@@ -67,9 +72,11 @@ function showInfo(data, tabletop) {
         $('.abouttagline').html(abouttagline);
         $('.sitetitle').html(sitetitle);
 
+        $('#broadcast-sermon').html(livebroadcast);
+
         $('.address').html(address);
-        $('#email').html(email);
-        $('#tel').html(tel);
+        $('.email').html(email);
+        $('.tel').html(tel);
 
         $('.inst').attr('href', inst);
         $('.fb').attr('href', fb);
@@ -77,11 +84,14 @@ function showInfo(data, tabletop) {
         $('.yout').attr('href', yout);
 
         $('#praydesc').html(praydesc);
+            $('.logo-title').html(logotitle2);
+        
 
         $('#prayertagline').html(prayertagline);
-        $('.prayeraudio').attr('src', './images/prayer/' + prayeraudio);
+        $('.prayeraudio').attr('src', prayeraudio);
 
         $('#givedesc').html(givedesc);
+        //alert(interacdesc);
         $('.interacdesc').html(interacdesc);
         $('#contactdesc').html(contactdesc);
 
@@ -99,7 +109,7 @@ function showInfo(data, tabletop) {
     var soutputW;
     var soutputM;
     var soutputO;
-    $('#usl-services').empty();
+    $('.usl-services').empty();
     $('#services-sec').empty();
     $('#usl-services-w').empty();
     $('#usl-services-m').empty();
@@ -122,16 +132,16 @@ function showInfo(data, tabletop) {
         return service['recurring'] === 'Other';
     });
 
-    console.log(sdataservcesW);
+    //console.log(sdataservcesW);
 
     for (var i = 0; i < sdataservces.length; i++) {
       
         soutput = '<li><span>' + sdataservces[i]['service-title'] + ': ' + sdataservces[i]['start-time'] + ' - ' + sdataservces[i]['end-time'] + '</span></li >';
-
+        //alert(soutput);
 
         soutput2 = '<h5 class="title color-black fw-b oo_mt co_mb ttu"><span>' + sdataservces[i]['service-title'] + ': ' + sdataservces[i]['start-time'] + ' - ' + sdataservces[i]['end-time'] + '</span></h5>';
 
-        $('#usl-services').append(soutput);
+        $('.usl-services').append(soutput);
         $('#services-sec').append(soutput2);
         
 
@@ -194,7 +204,7 @@ function showInfo(data, tabletop) {
 
     for (var i = 0; i < edataevent2.length; i++) {
      
-        evoutput = '<div class="col-md-4 col-sm-6"> <a href="images/events/' + edataevent2[i]['event-image'] + '" style="padding:0px; margin:0px"><div class="card"> <img class="card-img-top" src="./images/events/' + edataevent2[i]['event-image'] + '" alt="Card image" style="width:100%;height:412px;margin-bottom:0"><div class="card-body"> <h4 class="card-title" >' + edataevent2[i]['event-title'] + '</h4><p class="card-text"><span class="fa fa-clock-o fa-fw" style="margin-right:10px"></span>' + edataevent2[i]['event-date'] + ' ' + edataevent2[i]['start-time'] + ' - ' + edataevent[i]['end-time'] + '</p><p class="card-text" > <span class="fa fa-map-o fa-fw" style="margin-right:10px"></span>' + edataevent2[i]['event-location'] + '</p> </div ></div ></a></div > ';
+        evoutput = '<div class="col-md-4 col-sm-6"> <a href="' + edataevent2[i]['event-image'] + '" style="padding:0px; margin:0px"><div class="card"> <img class="card-img-top" src="' + edataevent2[i]['event-image'] + '" alt="Card image" style="width:100%;height:412px;margin-bottom:0"><div class="card-body"> <h4 class="card-title" >' + edataevent2[i]['event-title'] + '</h4><p class="card-text"><span class="fa fa-clock-o fa-fw" style="margin-right:10px"></span>' + edataevent2[i]['event-date'] + ' ' + edataevent2[i]['start-time'] + ' - ' + edataevent[i]['end-time'] + '</p><p class="card-text" > <span class="fa fa-map-o fa-fw" style="margin-right:10px"></span>' + edataevent2[i]['event-location'] + '</p> </div ></div ></a></div > ';
         $('#result-events').append(evoutput);
 
     }
@@ -204,6 +214,15 @@ function showInfo(data, tabletop) {
 
 window.addEventListener('DOMContentLoaded', init);
 
+
+function loadsermons() {
+
+    $('#result-sermon').empty();
+    $('#result-sermon').html('<img src="images/photos/preloader.GIF"/>');
+    $('.push-body').css('overflow', 'hidden');
+    loadlatestsermon();
+
+}
 
 
 function loadlatestevent(data, tabletop) {
@@ -254,6 +273,7 @@ function Events() {
    // loadlatestevent();
 
 }
+
 
 function Media() {
     document.getElementById("media").style.width = "100%";
@@ -342,7 +362,7 @@ function closeNav() {
 //Sermons Videos
 
 function loadlatestsermon() {
-
+    
     var channelId = 'UCNTiRBQNyfd64dGakU_Zg-Q';
     var channelIds = 'UCHp4qCAPmz7-5BJ601FDFnA';
     var channelName = '';
@@ -393,11 +413,16 @@ function loadlatestsermon() {
                         $('#result-sermon').append(output);
 
                     });
+                   
                 }
             );
-        }
+    }
+
    // });
 
+    localStorage.removeItem("data");
+    localStorage.setItem("data", $('#result-sermon').html());
+    console.log(localStorage.getItem("data"));
 }
 
 
