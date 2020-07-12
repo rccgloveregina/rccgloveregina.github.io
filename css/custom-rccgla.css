@@ -126,6 +126,14 @@
     max-width: 360px;
 }
 
+.interacdesc ol li {
+    list-style: decimal
+}
+
+.interacdesc p {
+    color: #000
+}
+
 
     .card-img, .card-img-top {
         border-top-left-radius: .5rem;
@@ -154,5 +162,3 @@
     font-size: 15px;
     margin-bottom: 0px;
 }
-
-.row{padding-right:15px; padding-left:15px}

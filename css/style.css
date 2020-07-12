@@ -94,7 +94,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-    color: #989898;
+    color: #000000;
     line-height: 1.857;
 }
 
@@ -175,10 +175,16 @@ h5 {
 }
 
 
-    .theme-overlay {
-        background-image: url(../images/photos/loc.jpg);
-        position: relative;
-    }
+.interacdesc ol li { list-style:decimal}
+.interacdesc p {
+
+color:#000
+}
+
+.theme-overlay {
+    background-image: url(../images/photos/loc.jpg);
+    position: relative;
+}
 
 .theme-overlay:before {
     content: "";
