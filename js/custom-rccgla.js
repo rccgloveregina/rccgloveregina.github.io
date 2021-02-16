@@ -231,7 +231,7 @@ function loadlatestevent(data, tabletop) {
     var evoutput;
     $('#result-events').empty();
     if (data2.length == 0) {
-        $('#result-events').html("<p>There are no upcoming events to display at this time.</p>");
+        $('#result-events').html("<p style='text-align:center'>There are no upcoming events to display at this time.</p>");
     }
     //console.log(data2);
    
