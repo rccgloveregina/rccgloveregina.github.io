@@ -191,7 +191,7 @@ function showInfo(data, tabletop) {
     });
 
     if (edataevent.length === 0) {
-        $('#result-events').html("<p>There are no upcoming events to display at this time.</p>");
+        $('#result-events').html("<p style="text-align:center">There are no upcoming events to display at this time.</p>");
     }
 
     //console.log(edataevent);
