@@ -1,5 +1,6 @@
 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1DDExu0nSLjqvP_5DCdBOWy3__BprsYa844eKQ4IWiFg/pubhtml';
 
+
 function init() {
     Tabletop.init({
         key: publicSpreadsheetUrl,
@@ -11,6 +12,7 @@ function init() {
 
 function showInfo(data, tabletop) {
     //alert('Successfully processe9d!');
+    $(body).hide();
     var dataevent = tabletop.sheets('events').elements; 
     var datagen = tabletop.sheets('general-info').elements;
     var dataservces = tabletop.sheets('services').elements;
@@ -110,7 +112,7 @@ function showInfo(data, tabletop) {
         $('#mandatequote').html(mandatequote);
         $('#mandateauthor').html(mandateauthor);
 
-        
+         $(body).show(); 
     }
 
     var soutput;
