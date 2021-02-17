@@ -12,7 +12,7 @@ function init() {
 
 function showInfo(data, tabletop) {
     //alert('Successfully processe9d!');
-    $(body).hide();
+  
     var dataevent = tabletop.sheets('events').elements; 
     var datagen = tabletop.sheets('general-info').elements;
     var dataservces = tabletop.sheets('services').elements;
@@ -112,7 +112,7 @@ function showInfo(data, tabletop) {
         $('#mandatequote').html(mandatequote);
         $('#mandateauthor').html(mandateauthor);
 
-         $(body).show(); 
+        
     }
 
     var soutput;
