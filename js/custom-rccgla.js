@@ -95,7 +95,7 @@ function showInfo(data, tabletop) {
         $('.prayeraudio').attr('src', prayeraudio);
         $('.logo img').attr('src', logourl);
         $('.logo img').css('width', logowidth + 'px');
-        $('.header-top').css('color', bannertopbackground);
+        $('.header-top').css('background', bannertopbackground);
         
         
 
