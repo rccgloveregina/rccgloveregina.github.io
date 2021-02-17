@@ -28,7 +28,7 @@ function showInfo(data, tabletop) {
 
         var praydesc = datagen[i]['prayer-description'];
         var prayertagline = datagen[i]['prayer-tagline'];
-        var prayeraudio = datagen[i]['prayer-audio'];
+        var prayeraudio = datagen[i]['prayer-audio-calc'];
 
         var givedesc = datagen[i]['giving-description'];
         var interacdesc = datagen[i]['interac-description'];
