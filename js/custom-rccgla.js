@@ -31,7 +31,7 @@ function showInfo(data, tabletop) {
         var prayeraudio = datagen[i]['prayer-audio-calc'];
         var logourl = datagen[i]['logo-url-calc'];
         var logowidth = datagen[i]['logo-width'];
-        var bannertopbackground = datagen[i]['banner-top-color'];
+        var bannertopbackground = datagen[i]['top-banner-color'];
             
 
         var givedesc = datagen[i]['giving-description'];
@@ -94,8 +94,8 @@ function showInfo(data, tabletop) {
         $('#prayertagline').html(prayertagline);
         $('.prayeraudio').attr('src', prayeraudio);
         $('.logo img').attr('src', logourl);
-        $('.logo img').css('width', logowidth);
-        $('.header-top').css('width', bannertopbackground);
+        $('.logo img').css('width', logowidth + 'px');
+        $('.header-top').css('color', bannertopbackground);
         
         
 
