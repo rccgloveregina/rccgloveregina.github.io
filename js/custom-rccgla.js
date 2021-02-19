@@ -39,7 +39,7 @@ function showInfo(data, tabletop) {
         var slidetwoimg = datagen[i]['slide-two-img-calc'];
         var slidethreeimg = datagen[i]['slide-three-img-calc'];
         
-        
+         var servicesdocurl = datagen[i]['services-doc-url-calc'];
             
 
         var givedesc = datagen[i]['giving-description'];
@@ -114,7 +114,7 @@ function showInfo(data, tabletop) {
          $('.rccg3-img').attr('data-thumb', slidethreeimg);
          $('.rccg3-img img').attr('src', slidethreeimg);
       
-        
+         $('.yout').attr('href', servicesdocurl)
               
 
         $('#givedesc').html(givedesc);
