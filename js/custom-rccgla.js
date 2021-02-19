@@ -34,6 +34,12 @@ function showInfo(data, tabletop) {
         var logourl = datagen[i]['logo-url-calc'];
         var logowidth = datagen[i]['logo-width'];
         var bannertopbackground = datagen[i]['top-banner-color'];
+        
+         var slideoneimg = datagen[i]['slide-one-img-calc'];
+        var slidetwoimg = datagen[i]['slide-two-img-calc'];
+        var slidethreeimg = datagen[i]['slide-three-img-calc'];
+        
+        
             
 
         var givedesc = datagen[i]['giving-description'];
@@ -99,7 +105,17 @@ function showInfo(data, tabletop) {
         $('.logo img').css('width', logowidth + 'px');
         $('.header-top').css('background', bannertopbackground);
         
+         $('.rccg1-img').attr('data-thumb', slideoneimg);
+         $('.rccg1-img img').attr('src', slideoneimg);
         
+         $('.rccg2-img').attr('data-thumb', slidetwoimg);
+         $('.rccg2-img img').attr('src', slidetwoimg);
+        
+         $('.rccg3-img').attr('data-thumb', slidethreeimg);
+         $('.rccg3-img img').attr('src', slidethreeimg);
+      
+        
+              
 
         $('#givedesc').html(givedesc);
         //alert(interacdesc);
