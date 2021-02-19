@@ -112,7 +112,7 @@ function showInfo(data, tabletop) {
         $('#mandatequote').html(mandatequote);
         $('#mandateauthor').html(mandateauthor);
 
-        
+       $('body').show(); 
     }
 
     var soutput;
