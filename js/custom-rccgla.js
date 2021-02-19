@@ -114,7 +114,7 @@ function showInfo(data, tabletop) {
          $('.rccg3-img').attr('data-thumb', slidethreeimg);
          $('.rccg3-img img').attr('src', slidethreeimg);
       
-         $('.servicesdoc').attr('href', servicesdocurl);
+         $('.servicesdoc a').attr('href', servicesdocurl);
               
 
         $('#givedesc').html(givedesc);
