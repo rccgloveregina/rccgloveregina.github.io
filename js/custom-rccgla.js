@@ -454,6 +454,6 @@ function loadlatestsermon() {
 }
 
 
-    if ($('#result-sermon').length == 0) {
+    if ($.trim($('#result-sermon').text()) == '') {
         $('#result-sermon').html("<p>There are no sermons to display at this time.</p>");
     }
