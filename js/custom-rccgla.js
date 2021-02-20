@@ -105,14 +105,14 @@ function showInfo(data, tabletop) {
         $('.logo img').css('width', logowidth + 'px');
         $('.header-top').css('background', bannertopbackground);
         console.log(slideoneimg);
-         $('.rccg1-img').attr('data-thumb', slideoneimg);
-         $('.rccg1-img img').attr('src', slideoneimg);
+         $('#rccg1-img').attr('data-thumb', slideoneimg);
+         $('#rccg1-img img').attr('src', slideoneimg);
         
-         $('.rccg2-img').attr('data-thumb', slidetwoimg);
-         $('.rccg2-img img').attr('src', slidetwoimg);
+         $('#rccg2-img').attr('data-thumb', slidetwoimg);
+         $('#rccg2-img img').attr('src', slidetwoimg);
         
-         $('.rccg3-img').attr('data-thumb', slidethreeimg);
-         $('.rccg3-img img').attr('src', slidethreeimg);
+         $('#rccg3-img').attr('data-thumb', slidethreeimg);
+         $('#rccg3-img img').attr('src', slidethreeimg);
       
          $('.servicesdoc a').attr('href', servicesdocurl);
               
