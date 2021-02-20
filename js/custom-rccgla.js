@@ -427,8 +427,8 @@ function loadlatestsermon() {
                 function (data) {
                     var output;
                     $('#result-sermon').empty();
-             console.log(data.items.length);
-              console.log("notvalid");      
+             //console.log(data.items.length);
+             // console.log("notvalid");      
                     if (data.items.length == 0) {
                         $('#result-sermon').html("<p>There are no sermons to display at this time.</p>");
                     }
@@ -454,4 +454,6 @@ function loadlatestsermon() {
 }
 
 
-
+    if ($('#result-sermon').text().length == 0) {
+        $('#result-sermon').html("<p>There are no sermons to display at this time.</p>");
+    }
