@@ -428,6 +428,7 @@ function loadlatestsermon() {
                     var output;
                     $('#result-sermon').empty();
              console.log(data.items.length)
+              console("notvalid");      
                     if (data.items.length == 0) {
                         $('#result-sermon').html("<p>There are no sermons to display at this time.</p>");
                     }
