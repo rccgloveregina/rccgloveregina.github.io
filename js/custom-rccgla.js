@@ -404,7 +404,7 @@ function loadlatestsermon() {
         $.get(
             "https://www.googleapis.com/youtube/v3/channels", {
                 part: 'contentDetails',
-                id: channelId,
+                id: channelIds,
                 key: 'AIzaSyB-PeMZY-XZo4yWigfWVhl8-D3bxptW1j4'
             },
             function (data) {
@@ -455,5 +455,5 @@ function loadlatestsermon() {
 
 
     if ($.trim($('#result-sermon').text()) == '') {
-        $('#result-sermon').html("<p>There are no sermons to display at this time.</p>");
+        $('#result-sermon').html("<p style='text-align:center'>There are no sermons to display at this time.</p>");
     }
