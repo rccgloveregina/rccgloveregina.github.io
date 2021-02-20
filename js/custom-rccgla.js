@@ -404,7 +404,7 @@ function loadlatestsermon() {
         $.get(
             "https://www.googleapis.com/youtube/v3/channels", {
                 part: 'contentDetails',
-                id: channelIds,
+                id: channelId,
                 key: 'AIzaSyB-PeMZY-XZo4yWigfWVhl8-D3bxptW1j4'
             },
             function (data) {
