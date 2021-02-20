@@ -231,7 +231,7 @@ function showInfo(data, tabletop) {
 
     for (var i = 0; i < edataevent2.length; i++) {
      
-        evoutput = '<div class="col-md-4 col-sm-6"> <a href="' + edataevent2[i]['event-image'] + '" style="padding:0px; margin:0px"><div class="card"> <img class="card-img-top" src="' + edataevent2[i]['event-image'] + '" alt="Card image" style="width:100%;height:412px;margin-bottom:0"><div class="card-body"> <h4 class="card-title" >' + edataevent2[i]['event-title'] + '</h4><p class="card-text"><span class="fa fa-clock-o fa-fw" style="margin-right:10px"></span>' + edataevent2[i]['event-date'] + ' ' + edataevent2[i]['start-time'] + ' - ' + edataevent[i]['end-time'] + '</p><p class="card-text" > <span class="fa fa-map-o fa-fw" style="margin-right:10px"></span>' + edataevent2[i]['event-location'] + '</p> </div ></div ></a></div > ';
+        evoutput = '<div class="col-md-4 col-sm-6"> <a href="' + edataevent2[i]['event-image-calc'] + '" style="padding:0px; margin:0px"><div class="card"> <img class="card-img-top" src="' + edataevent2[i]['event-image-calc'] + '" alt="Card image" style="width:100%;height:412px;margin-bottom:0"><div class="card-body"> <h4 class="card-title" >' + edataevent2[i]['event-title'] + '</h4><p class="card-text"><span class="fa fa-clock-o fa-fw" style="margin-right:10px"></span>' + edataevent2[i]['event-date'] + ' ' + edataevent2[i]['start-time'] + ' - ' + edataevent[i]['end-time'] + '</p><p class="card-text" > <span class="fa fa-map-o fa-fw" style="margin-right:10px"></span>' + edataevent2[i]['event-location'] + '</p> </div ></div ></a></div > ';
         $('#result-events').append(evoutput);
 
     }
@@ -273,7 +273,7 @@ function loadlatestevent(data, tabletop) {
 
 
 
-        evoutput = '<div class="col-md-4 col-sm-6"> <a href="images/events/' + data2[i]['event-image'] + '" style="padding:0px; margin:0px"><div class="card"> <img class="card-img-top" src="./images/events/' + data2[i]['event-image'] + '" alt="Card image" style="width:100%;height:230px;margin-bottom:0"><div class="card-body"> <h4 class="card-title" >' + data2[i]['event-title'] + '</h4><p class="card-text"><span class="fa fa-clock-o fa-fw" style="margin-right:10px"></span>' + data2[i]['event-date'] + ' ' + data2[i]['start-time'] + ' - ' + data2[i]['end-time'] + '</p><p class="card-text" > <span class="fa fa-map-o fa-fw" style="margin-right:10px"></span>' + data2[i]['event-location'] + '</p> </div ></div ></a></div > ';
+        evoutput = '<div class="col-md-4 col-sm-6"> <a href="images/events/' + data2[i]['event-image-calc'] + '" style="padding:0px; margin:0px"><div class="card"> <img class="card-img-top" src="./images/events/' + data2[i]['event-image-calc'] + '" alt="Card image" style="width:100%;height:230px;margin-bottom:0"><div class="card-body"> <h4 class="card-title" >' + data2[i]['event-title'] + '</h4><p class="card-text"><span class="fa fa-clock-o fa-fw" style="margin-right:10px"></span>' + data2[i]['event-date'] + ' ' + data2[i]['start-time'] + ' - ' + data2[i]['end-time'] + '</p><p class="card-text" > <span class="fa fa-map-o fa-fw" style="margin-right:10px"></span>' + data2[i]['event-location'] + '</p> </div ></div ></a></div > ';
         $('#result-events').append(evoutput);
 
     }
