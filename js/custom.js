@@ -488,7 +488,7 @@ Primary use:  Charity and Donation HTML5 Template
 
 
   $(document).on('ready', function() {
-    $(".wrapper").hide();
+    //$(".wrapper").hide();
       counterfunfact();
     });
 
