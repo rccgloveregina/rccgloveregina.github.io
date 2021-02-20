@@ -17,7 +17,7 @@ Primary use:  Charity and Donation HTML5 Template
   
   // Preloader 
   function stylePreloader() {
-    $('.preloader').delay(5000).fadeOut(600);
+    $('.preloader').delay(1000).fadeOut(600);
   } 
 
   // Header Style
