@@ -104,7 +104,9 @@ function showInfo(data, tabletop) {
         $('.logo img').attr('src', logourl);
         $('.logo img').css('width', logowidth + 'px');
         $('.header-top').css('background', bannertopbackground);
-        //console.log(slideoneimg);
+        alert(slideoneimg);
+        alert(slidetwoimg);
+        alert(slidethreeimg);
          $('#rccg1-img').attr('data-thumb', slideoneimg);
          $('#rccg1-img img').attr('src', slideoneimg);
         
