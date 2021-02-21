@@ -114,7 +114,7 @@ $('.home-slider').resizable({
    ========================================================================== */
   
   $(window).on('load', function() {
-    revSlider();
+   // revSlider();
   });
   
 
